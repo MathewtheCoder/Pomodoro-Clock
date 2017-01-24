@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html >
+<head>
+  
+
+  <meta charset="UTF-8">
+  <title>Pomodoro Clock</title>
+  <link href="http://fonts.googleapis.com/css?family=Dancing+Script:700|EB+Garamond" rel="stylesheet" type="text/css" />
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans|Dosis:400,800" rel="stylesheet" type="text/css" />
+  
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+<h1 class="text-center">Pomodoro Clock</h1>
+<br><br><br>
+<!--TImer-->
+<center>
+<div id="DateCountdown" data-timer="900" style="width: 50%;"></div>
+</center>
+<!--TimerEnd-->
+<!--Round Buttons-->
+<center class="btnmenu">
+<button type="button" class="btn btn-default btn-circle btn-lg edit"><i class="glyphicon glyphicon-pencil"></i></button>
+<button type="button" class="btn btn-primary btn-circle btn-lg stop"><i class="glyphicon glyphicon-pause"></i></button>
+<button type="button" class="btn btn-success btn-circle btn-lg restart"><i class="glyphicon glyphicon-refresh"></i></button>
+</center>
+<!--Round Buttons-->
+<!--Slider to set time-->
+<center class="slider">
+<input type="range" min="1" max="30" value="3" oninput="outputUpdate(value)">
+<output for="fader" id="volume"></output>
+<button type="button" class="btn btn-success btn-circle btn-lg ok"><i class="glyphicon glyphicon-ok"></i></button>
+</center>
+<!--Load js files last to prevent lag-->
+<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='js/timer.js'></script>
+
+<script src="js/index.js"></script>
+
+</body>
+</html>
